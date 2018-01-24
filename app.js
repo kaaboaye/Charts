@@ -1,5 +1,5 @@
 const WIDTH = 1280
-const HEIGTH = 720
+const HEIGHT = 720
 
 // DOM objects
 let ScaleXInput
@@ -19,7 +19,7 @@ let F
 let Rf = {}
 
 function setup() {
-  createCanvas(WIDTH, HEIGTH)
+  createCanvas(WIDTH, HEIGHT)
 
   // Get DOM objects
   ScaleXInput = document.getElementById("ScaleX")
@@ -29,7 +29,7 @@ function setup() {
 
   // Set reference frame propeties
   Rf.Width = WIDTH/2
-  Rf.Height = HEIGTH/2
+  Rf.Height = HEIGHT/2
 }
 
 function draw() {
@@ -66,18 +66,18 @@ function draw() {
 
   // Draw scale
   {
-    let possition
+    let position
 
-    // Scale on horisontal line
+    // Scale on horizontal line
     for (let i = -ScaleX; i <= ScaleX; ++i) {
-      possition = i * WIDTH / (2 * ScaleX)
-      line(possition, 10, possition, -10)
+      position = i * WIDTH / (2 * ScaleX)
+      line(position, 10, position, -10)
     }
 
     // Scale on vertical line
     for (let i = -ScaleY; i <= ScaleY; ++i) {
-      possition = i * HEIGTH / (2 * ScaleY)
-      line(10, possition, -10, possition)
+      position = i * HEIGHT / (2 * ScaleY)
+      line(10, position, -10, position)
     }
   }
 
